@@ -1,0 +1,7 @@
+import requests
+
+headers  = {'Content-Type': 'audio/x-wav'}
+file = {'output.mp3': open('speech.wav', 'rb')}
+
+r = requests.get('https://asr.yandex.net/asr_xml?uuid=01ae13cb744628b58fb536d496daa1e6&key=f4e6b918-0f5d-4406-a838-effba8c97f60&topic=queries HTTP/1.1', headers, file)
+print(r)
